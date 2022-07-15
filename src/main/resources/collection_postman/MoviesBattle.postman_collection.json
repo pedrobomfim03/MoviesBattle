@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "fbbe363f-9f53-487d-baa3-893dbb583f24",
+		"name": "MoviesBattle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jogador.completo@email.com\",\r\n    \"password\":\"senha1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jogador.completo@email.com\",\r\n    \"completeName\":\"Jogador Completo\",\r\n    \"password\":\"senha1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Iniciar Jogo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJNb3ZpZXMgQmF0dGxlIFRva2VuIiwic3ViIjoiam9nYWRvci5jb21wbGV0b0BlbWFpbC5jb20iLCJpYXQiOjE2NTc5MTMyMTQsImV4cCI6MTY1NzkxNTAxNH0.1eaNo2irJbW5_jwBqy--k6widhQmGRl5PeEc8qp89LQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game/begin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"begin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Jogo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJNb3ZpZXMgQmF0dGxlIFRva2VuIiwic3ViIjoiam9nYWRvci5jb21wbGV0b0BlbWFpbC5jb20iLCJpYXQiOjE2NTc5MTMyMTQsImV4cCI6MTY1NzkxNTAxNH0.1eaNo2irJbW5_jwBqy--k6widhQmGRl5PeEc8qp89LQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game/end",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"end"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trazer Jogada",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJNb3ZpZXMgQmF0dGxlIFRva2VuIiwic3ViIjoiam9nYWRvci5jb21wbGV0b0BlbWFpbC5jb20iLCJpYXQiOjE2NTc5MTMyMTQsImV4cCI6MTY1NzkxNTAxNH0.1eaNo2irJbW5_jwBqy--k6widhQmGRl5PeEc8qp89LQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/round",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"round"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Responder Jogada",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJNb3ZpZXMgQmF0dGxlIFRva2VuIiwic3ViIjoiam9nYWRvci5jb21wbGV0b0BlbWFpbC5jb20iLCJpYXQiOjE2NTc5MTMyMTQsImV4cCI6MTY1NzkxNTAxNH0.1eaNo2irJbW5_jwBqy--k6widhQmGRl5PeEc8qp89LQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idMovieChosen\":\"\",\r\n\t\"idRoundChosen\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/round",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"round"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trazer Ranking",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
